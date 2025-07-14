@@ -1,0 +1,141 @@
+.board-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 24px;
+  gap: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.board-container::-webkit-scrollbar {
+  display: none;
+}
+
+.column {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  width: 272px;
+  min-width: 272px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  max-height: 600px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.column:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.column h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.delete-column-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.delete-column-btn:hover {
+  color: var(--danger);
+}
+
+.droppable-column {
+  min-height: 150px;
+  max-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 6px;
+  scrollbar-width: thin;
+}
+
+.droppable-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.droppable-column::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+/* ✅ Add Card Section */
+.add-card-input {
+  margin-top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-card-input input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #1e293b;
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.add-card-input input::placeholder {
+  color: #888;
+}
+
+.add-card-input input:focus {
+  border-color: var(--primary);
+  background: #1e293b;
+}
+
+.add-card-input button {
+  padding: 10px 14px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.add-card-input button:hover {
+  background-color: var(--primary-dark);
+}
+
+.add-card-btn {
+  margin-top: 12px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.add-card-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}

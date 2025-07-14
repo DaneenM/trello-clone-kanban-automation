@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0f172a;
+  --text: #f9fafb;
+  --primary: #3b82f6;
+  --accent: #22c55e;
+  --card: #1e293b;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --glow: 0 0 12px rgba(59, 130, 246, 0.4); /* glow for buttons/effects */
+  --radius: 14px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  color: var(--accent);
+  background: rgba(34, 197, 94, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* Optional universal glow hover effect */
+button:hover {
+  box-shadow: var(--glow);
+}

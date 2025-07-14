@@ -1,0 +1,62 @@
+:root {
+  --primary: #4cc9f0; /* futuristic cyan */
+  --primary-dark: #3a8fd8;
+  --card: #0f172a; /* deep space blue */
+  --background: #0a0e1a;
+  --text: #f1f5f9;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --danger: #ff6b6b;
+  --transition: all 0.3s ease-in-out;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.App-header {
+  background-color: transparent;
+  padding: 24px;
+}
+
+.App-link {
+  color: var(--primary);
+  transition: var(--transition);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.App-link:hover {
+  color: var(--primary-dark);
+  text-shadow: 0 0 6px rgba(76, 201, 240, 0.5);
+}
+
+/* 🔵 NEW: App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 🔵 NEW: Glowing Futuristic Title */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary);
+ text-shadow:
+    0 0 4px rgba(76, 201, 240, 0.4),
+    0 0 10px rgba(76, 201, 240, 0.2);
+  margin: 16px 0 32px;
+  text-align: center;
+}
